@@ -10,7 +10,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Poppins", "Poppins Placeholder", sans-serif;
             margin: 0;
             padding: 0;
             background: rgb(249, 247, 247);
@@ -103,6 +103,11 @@
         .btn-primary:hover {
             background-color: #0056b3;
         }
+
+        .heart-card{
+            background-image: url('/assets/background.svg');height:282px;background-size: cover;padding:20px;
+        }
+        
 
         @media (max-width: 768px) {
             .toggle-btn {
@@ -246,7 +251,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="container d-flex flex-md-row flex-column gap-4 justify-content-center align-items-center p-md-4 p-0">
+                    <div class="container fw-bold d-flex flex-md-row flex-column gap-4 justify-content-center align-items-center p-md-4 p-0">
                         <div class="col-12 col-md-5 p-1 bg-white" style="border-radius: 16px;">
                             <div class="container d-flex flex-column align-items-center p-4" style="background-color: rgb(244, 239, 239);border-radius: 16px;">
                                 <div class="container d-flex justify-content-center align-items-center p-4">
@@ -276,6 +281,26 @@
                                     </ul>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid mt-primary">
+                <div class="container d-flex justify-content-center align-items-center py-4">
+                    <div class="col-md-3 col-12 d-flex heart-card">
+                        <div class="col-4 d-flex justify-content-center align-items-center">
+                            <img src="/assets/dummy1.avif" alt="">
+                        </div>
+                        <div class="col-4 d-flex justify-content-center align-items-center">
+                            <div class="container rounded-circle bg-primary d-flex justify-content-center align-items-center " style="height: 92px;width: 100px;">
+                                <img src="/assets/users.avif" style="
+                                height: 55px;
+                                border-radius: 50%;
+                                " alt="">
+                            </div>
+                        </div>
+                        <div class="col-4 d-flex justify-content-center align-items-center">
+                            <img src="/assets/dummy2.avif" alt="">
                         </div>
                     </div>
                 </div>
