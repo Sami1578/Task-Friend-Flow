@@ -105,8 +105,34 @@
         }
 
         .heart-card{
-            background-image: url('/assets/background.svg');height:282px;background-size: cover;padding:20px;
+            background-image: url('/assets/background.svg');height:282px;background-size: cover;padding:10px 20px;
         }
+
+        .review-container {
+            position: relative;
+            overflow: hidden; /* Ensure shadow stays inside */
+        }
+
+        .review-container::before,
+        .review-container::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 140px; /* Adjust height for more/less blur */
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), transparent);
+            z-index: 2;
+        }
+
+        .review-container::before {
+            top: 0; /* Top shadow */
+        }
+
+        .review-container::after {
+            bottom: 0; /* Bottom shadow */
+            background: linear-gradient(to top, rgba(255, 255, 255, 0.7), transparent);
+        }
+
         
 
         @media (max-width: 768px) {
@@ -174,13 +200,13 @@
         <div class="container mt-5">
             <div class="row d-flex justify-content-center align-items-center mb-2">
                 <div class="rounded-pill col-lg-5 col-md-9 col-11 p-1 bg-white">
-                <div class="row d-flex flex-row justify-content-center align-items-center">
-                    <div class="col-2 d-flex justify-content-end">
+                <div class="row d-flex flex-row justify-content-center align-items-center px-1">
+                    <div class="col-2 d-flex justify-content-end" style="margin-right: -18px;">
                     <img class="rounded-circle img-fluid height-30" src="/assets/dummy1.avif"  alt="">
-                    <img class="rounded-circle img-fluid height-30" style="margin-left: -18px;" src="/assets/dummy2.avif" alt="">
-                    <img class="rounded-circle img-fluid height-30" style="margin-left: -18px;" src="/assets/dummy3.avif" alt="">
+                    <img class="rounded-circle img-fluid height-30" style="margin-left: -22px;" src="/assets/dummy2.avif" alt="">
+                    <img class="rounded-circle img-fluid height-30" style="margin-left: -22px;" src="/assets/dummy3.avif" alt="">
                     </div>
-                        <div class="col-9 d-flex justify-content-start align-items-center">
+                        <div class="col-10 d-flex justify-content-start align-items-center">
                             <p class="mb-0 fw-bold">340 + Agencies<span class="d-md-inline d-none">/Consultants</span>/Coaches Use Us</p>
                         </div>
                     </div>
@@ -286,7 +312,7 @@
                 </div>
             </div>
             <div class="container-fluid mt-primary">
-                <div class="container d-flex justify-content-center align-items-center py-4">
+                <div class="container d-flex justify-content-center align-items-center py-2">
                     <div class="col-md-3 col-12 d-flex heart-card">
                         <div class="col-4 d-flex justify-content-center align-items-center">
                             <img src="/assets/dummy1.avif" alt="">
@@ -301,6 +327,271 @@
                         </div>
                         <div class="col-4 d-flex justify-content-center align-items-center">
                             <img src="/assets/dummy2.avif" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="container d-flex justify-content-center align-items-center">
+                    <div class="col-md-3 col-12 d-flex justify-content-center align-items-center">
+                        <div class="rounded-pill p-1 bg-white text-center" style="margin-top: -6rem;">
+                            <div class="rounded-pill py-1 px-3" style="background-color: rgb(239, 243, 247);">
+                                <p><span><img src="/assets/icon7.svg" alt=""></span> Comparison</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-2 align-items-center justify-content-center ">
+                    <div class="container col-md-8 col-12 text-center px-md-5 py-3">
+                        <h1 class="heading-primary">Hear From our Users</h1>
+                        <div class="container px-md-5 px-1">
+                            <p class="mt-3 txt-primary">Read how our users have achieved success and improved their skills with Aston’s courses.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex my-4 review-container" style="
+                    max-height: 55rem;
+                    overflow: hidden;
+                ">
+                    <div class="col-md-4 col-12">
+                        <div class="container m-2" style="border-radius: 12px; border: 5px solid white; background-color: rgb(239, 243, 247); padding: 20px;">
+                            <div class="d-flex flex-column">
+                                <p class="text-center mb-4">"FriendFlow has completely transformed the way I connect with clients. The automation tools are a game-changer, and I've seen a significant increase in my client base."</p>
+                                <hr>
+                                <div class="d-flex align-items-center">
+                                    <div class="col-8 d-flex align-items-center">
+                                        <div class="col-4">
+                                            <img src="/assets/review1.avif" alt="User Avatar" class="rounded" style="width: 50px; height: 50px;">
+                                        </div>
+                                        <div class="col-8 px-2">
+                                            <h5 class="fw-bold mb-0">John Doe</h5>
+                                            <p class="text-muted mb-0">Coach</p>
+
+                                        </div>
+                                    </div>
+                                    <div class=" col-4 d-flex justify-content-end">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <div class="container m-2" style="border-radius: 12px; border: 5px solid white; background-color: rgb(239, 243, 247); padding: 20px;">
+                            <div class="d-flex flex-column">
+                                <p class="text-center mb-4">"FriendFlow has completely transformed the way I connect with clients. The automation tools are a game-changer, and I've seen a significant increase in my client base."</p>
+                                <hr>
+                                <div class="d-flex align-items-center">
+                                    <div class="col-8 d-flex align-items-center">
+                                        <div class="col-4">
+                                            <img src="/assets/review1.avif" alt="User Avatar" class="rounded" style="width: 50px; height: 50px;">
+                                        </div>
+                                        <div class="col-8 px-2">
+                                            <h5 class="fw-bold mb-0">John Doe</h5>
+                                            <p class="text-muted mb-0">Coach</p>
+
+                                        </div>
+                                    </div>
+                                    <div class=" col-4 d-flex justify-content-end">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <div class="container m-2" style="border-radius: 12px; border: 5px solid white; background-color: rgb(239, 243, 247); padding: 20px;">
+                            <div class="d-flex flex-column">
+                                <p class="text-center mb-4">"FriendFlow has completely transformed the way I connect with clients. The automation tools are a game-changer, and I've seen a significant increase in my client base."</p>
+                                <hr>
+                                <div class="d-flex align-items-center">
+                                    <div class="col-8 d-flex align-items-center">
+                                        <div class="col-4">
+                                            <img src="/assets/review1.avif" alt="User Avatar" class="rounded" style="width: 50px; height: 50px;">
+                                        </div>
+                                        <div class="col-8 px-2">
+                                            <h5 class="fw-bold mb-0">John Doe</h5>
+                                            <p class="text-muted mb-0">Coach</p>
+
+                                        </div>
+                                    </div>
+                                    <div class=" col-4 d-flex justify-content-end">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <div class="container m-2" style="border-radius: 12px; border: 5px solid white; background-color: rgb(239, 243, 247); padding: 20px;">
+                            <div class="d-flex flex-column">
+                                <p class="text-center mb-4">"FriendFlow has completely transformed the way I connect with clients. The automation tools are a game-changer, and I've seen a significant increase in my client base."</p>
+                                <hr>
+                                <div class="d-flex align-items-center">
+                                    <div class="col-8 d-flex align-items-center">
+                                        <div class="col-4">
+                                            <img src="/assets/review1.avif" alt="User Avatar" class="rounded" style="width: 50px; height: 50px;">
+                                        </div>
+                                        <div class="col-8 px-2">
+                                            <h5 class="fw-bold mb-0">John Doe</h5>
+                                            <p class="text-muted mb-0">Coach</p>
+
+                                        </div>
+                                    </div>
+                                    <div class=" col-4 d-flex justify-content-end">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <div class="container m-2" style="border-radius: 12px; border: 5px solid white; background-color: rgb(239, 243, 247); padding: 20px;">
+                            <div class="d-flex flex-column">
+                                <p class="text-center mb-4">"FriendFlow has completely transformed the way I connect with clients. The automation tools are a game-changer, and I've seen a significant increase in my client base."</p>
+                                <hr>
+                                <div class="d-flex align-items-center">
+                                    <div class="col-8 d-flex align-items-center">
+                                        <div class="col-4">
+                                            <img src="/assets/review1.avif" alt="User Avatar" class="rounded" style="width: 50px; height: 50px;">
+                                        </div>
+                                        <div class="col-8 px-2">
+                                            <h5 class="fw-bold mb-0">John Doe</h5>
+                                            <p class="text-muted mb-0">Coach</p>
+
+                                        </div>
+                                    </div>
+                                    <div class=" col-4 d-flex justify-content-end">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <div class="container m-2" style="border-radius: 12px; border: 5px solid white; background-color: rgb(239, 243, 247); padding: 20px;">
+                            <div class="d-flex flex-column">
+                                <p class="text-center mb-4">"FriendFlow has completely transformed the way I connect with clients. The automation tools are a game-changer, and I've seen a significant increase in my client base."</p>
+                                <hr>
+                                <div class="d-flex align-items-center">
+                                    <div class="col-8 d-flex align-items-center">
+                                        <div class="col-4">
+                                            <img src="/assets/review1.avif" alt="User Avatar" class="rounded" style="width: 50px; height: 50px;">
+                                        </div>
+                                        <div class="col-8 px-2">
+                                            <h5 class="fw-bold mb-0">John Doe</h5>
+                                            <p class="text-muted mb-0">Coach</p>
+
+                                        </div>
+                                    </div>
+                                    <div class=" col-4 d-flex justify-content-end">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <div class="container m-2" style="border-radius: 12px; border: 5px solid white; background-color: rgb(239, 243, 247); padding: 20px;">
+                            <div class="d-flex flex-column">
+                                <p class="text-center mb-4">"FriendFlow has completely transformed the way I connect with clients. The automation tools are a game-changer, and I've seen a significant increase in my client base."</p>
+                                <hr>
+                                <div class="d-flex align-items-center">
+                                    <div class="col-8 d-flex align-items-center">
+                                        <div class="col-4">
+                                            <img src="/assets/review1.avif" alt="User Avatar" class="rounded" style="width: 50px; height: 50px;">
+                                        </div>
+                                        <div class="col-8 px-2">
+                                            <h5 class="fw-bold mb-0">John Doe</h5>
+                                            <p class="text-muted mb-0">Coach</p>
+
+                                        </div>
+                                    </div>
+                                    <div class=" col-4 d-flex justify-content-end">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <div class="container m-2" style="border-radius: 12px; border: 5px solid white; background-color: rgb(239, 243, 247); padding: 20px;">
+                            <div class="d-flex flex-column">
+                                <p class="text-center mb-4">"FriendFlow has completely transformed the way I connect with clients. The automation tools are a game-changer, and I've seen a significant increase in my client base."</p>
+                                <hr>
+                                <div class="d-flex align-items-center">
+                                    <div class="col-8 d-flex align-items-center">
+                                        <div class="col-4">
+                                            <img src="/assets/review1.avif" alt="User Avatar" class="rounded" style="width: 50px; height: 50px;">
+                                        </div>
+                                        <div class="col-8 px-2">
+                                            <h5 class="fw-bold mb-0">John Doe</h5>
+                                            <p class="text-muted mb-0">Coach</p>
+
+                                        </div>
+                                    </div>
+                                    <div class=" col-4 d-flex justify-content-end">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <div class="container m-2" style="border-radius: 12px; border: 5px solid white; background-color: rgb(239, 243, 247); padding: 20px;">
+                            <div class="d-flex flex-column">
+                                <p class="text-center mb-4">"FriendFlow has completely transformed the way I connect with clients. The automation tools are a game-changer, and I've seen a significant increase in my client base."</p>
+                                <hr>
+                                <div class="d-flex align-items-center">
+                                    <div class="col-8 d-flex align-items-center">
+                                        <div class="col-4">
+                                            <img src="/assets/review1.avif" alt="User Avatar" class="rounded" style="width: 50px; height: 50px;">
+                                        </div>
+                                        <div class="col-8 px-2">
+                                            <h5 class="fw-bold mb-0">John Doe</h5>
+                                            <p class="text-muted mb-0">Coach</p>
+
+                                        </div>
+                                    </div>
+                                    <div class=" col-4 d-flex justify-content-end">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
